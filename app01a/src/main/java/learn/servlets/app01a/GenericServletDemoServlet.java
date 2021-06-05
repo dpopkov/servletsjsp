@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDateTime;
 
 @WebServlet(name = "GenericServletDemoServlet",
         urlPatterns = {"/generic"},
@@ -28,6 +29,7 @@ public class GenericServletDemoServlet extends GenericServlet {
                 "<body>",
                 "<p>Admin: " + admin + "</p>",
                 "<p>Email: " + email + "</p>",
+                "<p>Date/time: " + LocalDateTime.now() + "</p>",
                 "</body>",
                 "</html>")
         );
